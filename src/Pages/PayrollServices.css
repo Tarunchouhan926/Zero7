@@ -1,0 +1,199 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Lora:wght@500;700&display=swap');
+
+/* Global Reset and Upward Shift */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f8fafc;
+  font-family: 'Poppins', sans-serif;
+}
+
+.payroll-services {
+  color: #2d3748;
+  line-height: 1.6;
+  min-height: 100vh;
+  position: relative;
+  top: -30px; /* Slightly more upward shift */
+  background-color: #f8fafc;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem;
+}
+
+/* Headings */
+h1 {
+  font-family: 'Lora', serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: #1a365d;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  text-align: center;
+}
+
+h2 {
+  font-family: 'Lora', serif;
+  font-size: 1.9rem;
+  font-weight: 600;
+  color: #2c5282;
+  margin-bottom: 1.3rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #4299e1, #63b3ed);
+  border-radius: 2px;
+}
+
+/* Subtitle */
+.subtitle {
+  font-size: 1.25rem;
+  color: #4a5568;
+  margin-top: 0.5rem;
+  margin-bottom: 1.75rem;
+  max-width: 700px;
+  text-align: center;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* Hero Section */
+.hero-section {
+  text-align: center;
+  padding: 2.5rem 0;
+  margin-bottom: 1.75rem;
+  animation: fadeIn 1s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-section h1 {
+  margin-top: -8px;
+}
+
+/* Offer & Benefits Sections */
+.offer-section, .benefits-section {
+  background-color: #fff;
+  padding: 2rem 2.5rem;
+  margin-bottom: 2rem;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(100, 116, 139, 0.1);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2d3748;
+  line-height: 1.7;
+  font-weight: 400;
+  animation: fadeUp 0.8s ease-in-out;
+}
+
+.offer-section:hover, .benefits-section:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(100, 116, 139, 0.15);
+}
+
+.offer-section h2, .benefits-section h2 {
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+  color: #1a202c;
+}
+
+.offer-section p, .benefits-section p {
+  font-size: 1.05rem;
+  color: #4a5568;
+  margin-bottom: 1.5rem;
+}
+
+/* Features List */
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.features-list li {
+  padding: 0.8rem 0;
+  display: flex;
+  align-items: flex-start;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #2d3748;
+}
+
+.bullet-icon {
+  color: #4299e1;
+  font-weight: 700;
+  margin-right: 1rem;
+  font-size: 1.3rem;
+  min-width: 22px;
+  line-height: 1;
+}
+
+/* CTA Section */
+.cta-section {
+  text-align: center;
+  padding: 2.5rem 0;
+}
+
+.cta-button {
+  background: linear-gradient(90deg, #4299e1, #3182ce);
+  color: white;
+  border: none;
+  padding: 1rem 2.75rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(66, 153, 225, 0.35);
+  user-select: none;
+}
+
+.cta-button:hover {
+  background: linear-gradient(90deg, #3182ce, #2b6cb0);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(49, 130, 206, 0.45);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container { padding: 1.2rem 1rem; }
+  h1 { font-size: 2.2rem; }
+  h2 { font-size: 1.6rem; }
+  .offer-section, .benefits-section { padding: 1.75rem 2rem; }
+  .hero-section { padding: 2.25rem 0; }
+  .features-list li { font-size: 1rem; }
+}
+
+@media (max-width: 480px) {
+  h1 { font-size: 1.8rem; }
+  .subtitle { font-size: 1rem; }
+  .features-list li { font-size: 0.95rem; }
+  .cta-button { width: 100%; padding: 1rem; font-size: 1rem; }
+}
