@@ -101,10 +101,10 @@ const Contact = () => {
                 required
               >
                 <option value="">Select a Service</option>
-                <option value="consultation">Consultation</option>
-                <option value="design">Design Services</option>
-                <option value="development">Development</option>
-                <option value="marketing">Marketing</option>
+                <option value="consultation">Training</option>
+                <option value="design">Payroll Services</option>
+                <option value="development">Resume Marketing</option>
+                <option value="marketing">Campus Hiring</option>
                 <option value="support">Technical Support</option>
               </select>
             </div>
@@ -123,23 +123,6 @@ const Contact = () => {
         </div>
       </div>
 
-      <div className="social-section">
-        <h2>Social Media Links</h2>
-        <div className="social-icons">
-          <a href="https://www.instagram.com/company" className="social-link" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-instagram"></i>
-          </a>
-          <a href="https://www.linkedin.com/company" className="social-link" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-linkedin-in"></i>
-          </a>
-          <a href="https://wa.me/15559876543" className="social-link" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-whatsapp"></i>
-          </a>
-          <a href="https://www.facebook.com/company" className="social-link" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-facebook-f"></i>
-          </a>
-        </div>
-      </div>
     </div>
   );
 };

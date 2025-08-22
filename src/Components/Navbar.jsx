@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -8,7 +7,6 @@ import './Navbar.css';
 const Navbar = () => {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isTrainingOpen, setIsTrainingOpen] = useState(false);
-  const [isOthersOpen, setIsOthersOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
@@ -17,7 +15,6 @@ const Navbar = () => {
     if (!isMobileMenuOpen) {
       setIsServicesOpen(false);
       setIsTrainingOpen(false);
-      setIsOthersOpen(false);
     }
   };
 
@@ -28,10 +25,9 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-       <Link to="/" className="navbar-logo">
-            <img src="/Logo6.jpg" alt="Zero7 Technologies Logo" className="logo-img" />
-       </Link>
-
+        <Link to="/" className="navbar-logo">
+          <img src="/Logo6.jpg" alt="Zero7 Technologies Logo" className="logo-img" />
+        </Link>
 
         <div className="mobile-menu-icon" onClick={toggleMobileMenu}>
           <FontAwesomeIcon icon={isMobileMenuOpen ? faTimes : faBars} />
@@ -48,22 +44,24 @@ const Navbar = () => {
               About Us
             </Link>
           </li>
-          <li 
+
+          {/* Services Dropdown */}
+          <li
             className="nav-item services-item"
             onMouseEnter={() => setIsServicesOpen(true)}
             onMouseLeave={() => setIsServicesOpen(false)}
             onClick={() => setIsServicesOpen(!isServicesOpen)}
           >
             <div className="nav-links">
-              Services 
-              <FontAwesomeIcon 
-                icon={isServicesOpen ? faChevronUp : faChevronDown} 
+              Services
+              <FontAwesomeIcon
+                icon={isServicesOpen ? faChevronUp : faChevronDown}
                 className="dropdown-icon"
               />
             </div>
             {isServicesOpen && (
               <ul className="services-dropdown">
-                <li 
+                <li
                   className="training-submenu"
                   onMouseEnter={() => setIsTrainingOpen(true)}
                   onMouseLeave={() => setIsTrainingOpen(false)}
@@ -71,8 +69,8 @@ const Navbar = () => {
                 >
                   <div className="dropdown-link">
                     Training
-                    <FontAwesomeIcon 
-                      icon={isTrainingOpen ? faChevronUp : faChevronDown} 
+                    <FontAwesomeIcon
+                      icon={isTrainingOpen ? faChevronUp : faChevronDown}
                       className="submenu-icon"
                     />
                   </div>
@@ -96,7 +94,6 @@ const Navbar = () => {
                     Payroll Services
                   </Link>
                 </li>
-                
                 <li>
                   <Link to="/services/resume-marketing" className="dropdown-link" onClick={closeMobileMenu}>
                     Resume Marketing
@@ -110,6 +107,7 @@ const Navbar = () => {
               </ul>
             )}
           </li>
+
           <li className="nav-item">
             <Link to="/college-connect" className="nav-links" onClick={closeMobileMenu}>
               College Connect
@@ -130,40 +128,12 @@ const Navbar = () => {
               Contact Us
             </Link>
           </li>
-          <li 
-            className="nav-item others-item"
-            onMouseEnter={() => setIsOthersOpen(true)}
-            onMouseLeave={() => setIsOthersOpen(false)}
-            onClick={() => setIsOthersOpen(!isOthersOpen)}
-          >
-            <div className="nav-links">
-              More 
-              <FontAwesomeIcon 
-                icon={isOthersOpen ? faChevronUp : faChevronDown} 
-                className="dropdown-icon"
-              />
-            </div>
-            {isOthersOpen && (
-              <div className="dropdown-container">
-                <ul className="others-dropdown">
-                  <li>
-                    <Link to="/blog" className="dropdown-link" onClick={closeMobileMenu}>
-                      Blog
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/faqs" className="dropdown-link" onClick={closeMobileMenu}>
-                      FAQs
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/testimonials" className="dropdown-link" onClick={closeMobileMenu}>
-                      Testimonials
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            )}
+
+          {/* Blog link, no dropdown */}
+          <li className="nav-item">
+            <Link to="/blog" className="nav-links" onClick={closeMobileMenu}>
+              Blog
+            </Link>
           </li>
         </ul>
       </div>

@@ -5,7 +5,7 @@ import { FaFacebookF, FaInstagram, FaLinkedin, FaWhatsapp, FaPaperPlane } from "
 
 const Footer = () => {
   const scrollToTop = () => {
-    window.scrollTo(0, 0); // instantly jump to top
+    window.scrollTo(0, 0);
   };
 
   return (
@@ -14,16 +14,17 @@ const Footer = () => {
 
         {/* Company Info */}
         <div className="footer-section">
-         
+          <div className="new">
           <p className="tagline">
             Crafting unforgettable digital experiences with innovative solutions. 
             Your vision, our expertise.
           </p>
           <div className="social-icons">
-            <a href="https://facebook.com"><FaFacebookF /></a>
-            <a href="https://instagram.com"><FaInstagram /></a>
-            <a href="https://linkedin.com"><FaLinkedin /></a>
-            <a href="https://linkedin.com"><FaWhatsapp /></a>
+            <a href="https://facebook.com" target="_blank" rel="noreferrer"><FaFacebookF /></a>
+            <a href="https://instagram.com" target="_blank" rel="noreferrer"><FaInstagram /></a>
+            <a href="https://linkedin.com" target="_blank" rel="noreferrer"><FaLinkedin /></a>
+            <a href="https://wa.me/1234567890" target="_blank" rel="noreferrer"><FaWhatsapp /></a>
+          </div>
           </div>
         </div>
 

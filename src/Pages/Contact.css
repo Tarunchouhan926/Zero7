@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
 
+/* REMOVE THESE GLOBAL STYLES - they belong in your main global CSS file */
+/* 
 * {
   margin: 0;
   padding: 0;
@@ -13,6 +15,7 @@ body {
   color: #333;
   background-color: #f9f9f9;
 }
+*/
 
 .contact-container {
   max-width: 1200px;
@@ -54,8 +57,7 @@ body {
 }
 
 .contact-details h2,
-.inquiry-form h2,
-.social-section h2 {
+.inquiry-form h2 {
   font-size: 1.8rem;
   color: #2c3e50;
   margin-bottom: 25px;
@@ -64,8 +66,7 @@ body {
 }
 
 .contact-details h2::after,
-.inquiry-form h2::after,
-.social-section h2::after {
+.inquiry-form h2::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -164,57 +165,6 @@ body {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-.social-section {
-  text-align: center;
-  padding: 40px 0;
-}
-
-.social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  margin-top: 20px;
-}
-
-.social-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 60px;
-  height: 60px;
-  background-color: white;
-  border-radius: 50%;
-  color: #2c3e50;
-  font-size: 1.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
-  text-decoration: none;
-}
-
-.social-link:hover {
-  transform: translateY(-5px);
-}
-
-.social-link:nth-child(1):hover {
-  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-  color: white;
-}
-
-.social-link:nth-child(2):hover {
-  background-color: #0077b5;
-  color: white;
-}
-
-.social-link:nth-child(3):hover {
-  background-color: #25D366;
-  color: white;
-}
-
-.social-link:nth-child(4):hover {
-  background-color: #3b5998;
-  color: white;
-}
-
 /* Responsive Design */
 @media (max-width: 992px) {
   .contact-header h1 {
@@ -233,13 +183,8 @@ body {
   }
   
   .contact-details h2,
-  .inquiry-form h2,
-  .social-section h2 {
+  .inquiry-form h2 {
     font-size: 1.6rem;
-  }
-  
-  .social-icons {
-    flex-wrap: wrap;
   }
 }
 
@@ -258,11 +203,5 @@ body {
   
   .inquiry-form form {
     padding: 20px;
-  }
-  
-  .social-link {
-    width: 50px;
-    height: 50px;
-    font-size: 1.2rem;
   }
 }
