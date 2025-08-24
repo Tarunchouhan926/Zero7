@@ -11,9 +11,15 @@ import Contact from './Pages/Contact';
 import CollegeConnect from './Pages/CollegeConnect';
 import PayrollServices from './Pages/PayrollServices';
 import Resumemarketing from './Pages/Resumemarketing';
+import DigitalCourses from './Pages/DigitalCourses';
 import Ittraining from './Pages/Ittraining';  
 import NonIttraining from './Pages/Nonittraining';
-import Footer from './Components/Footer';   // ✅ import Footer
+import Footer from './Components/Footer';
+import NewBatches from './Pages/NewBatches';
+
+// ✅ import the new page
+import CampusHiring from './Pages/CampusHiring';
+
 import './App.css';
 
 function App() {
@@ -29,16 +35,19 @@ function App() {
             <Route path="non-it-training" element={<NonIttraining />} />
             <Route path="payroll-services" element={<PayrollServices />} />
             <Route path="resume-marketing" element={<Resumemarketing />} />
-            <Route path="campus-hiring-drives" element={<div className="service-page">Campus Hiring & Drives Content</div>} />
+            {/* ✅ add campus hiring under services */}
+            <Route path="campus-hiring" element={<CampusHiring />} />
           </Route>
           <Route path="/testimonials" element={<Testimonials />} />
+          <Route path="/digital-courses" element={<DigitalCourses />} />
+          <Route path="/new-batches" element={<NewBatches />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/faqs" element={<FAQs />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/college-connect" element={<CollegeConnect />} />
         </Routes>
       </div>
-      {/* ✅ Footer will always be visible below all pages */}
+      {/* ✅ Footer stays global */}
       <Footer />
     </div>
   );

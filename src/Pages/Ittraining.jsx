@@ -10,21 +10,21 @@ const Ittraining= () => {
   ];
 
   return (
-    <div className="digital-courses-container">
-      <header className="page-header">
+    <div className="ittraining-container">
+      <header className="it-page-header">
         <h1>IT Training Programs</h1>
         <p>Enhance your tech skills with our industry-relevant IT courses</p>
       </header>
 
-      <section className="programs-section">
-        <div className="courses-grid">
+      <section className="it-programs-section">
+        <div className="it-courses-grid">
           {itPrograms.map((course) => (
-            <div key={course.id} className="course-card">
-              <div className="course-icon">{course.icon}</div>
-              <h3 className="course-title">{course.title}</h3>
-              <p className="course-description">{course.description}</p>
-              <div className="course-price">{course.price}</div>
-              <button className="learn-more-btn">Learn More</button>
+            <div key={course.id} className="it-course-card">
+              <div className="it-course-icon">{course.icon}</div>
+              <h3 className="it-course-title">{course.title}</h3>
+              <p className="it-course-description">{course.description}</p>
+              <div className="it-course-price">{course.price}</div>
+              <button className="it-learn-more-btn">Learn More</button>
             </div>
           ))}
         </div>

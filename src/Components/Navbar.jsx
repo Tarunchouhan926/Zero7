@@ -100,8 +100,8 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/services/campus-hiring-drives" className="dropdown-link" onClick={closeMobileMenu}>
-                    Campus Hiring
+                  <Link to="/services/campus-hiring" className="dropdown-link" onClick={closeMobileMenu}>
+                Campus Hiring
                   </Link>
                 </li>
               </ul>

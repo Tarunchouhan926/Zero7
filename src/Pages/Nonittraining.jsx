@@ -10,21 +10,21 @@ const Nonittraining = () => {
   ];
 
   return (
-    <div className="digital-courses-container">
-      <header className="page-header">
+    <div className="nonittraining-container">
+      <header className="nonit-page-header">
         <h1>Non-IT Training Programs</h1>
         <p>Boost your professional skills with our specialized Non-IT courses</p>
       </header>
 
-      <section className="programs-section">
-        <div className="courses-grid">
+      <section className="nonit-programs-section">
+        <div className="nonit-courses-grid">
           {nonItPrograms.map((course) => (
-            <div key={course.id} className="course-card">
-              <div className="course-icon">{course.icon}</div>
-              <h3 className="course-title">{course.title}</h3>
-              <p className="course-description">{course.description}</p>
-              <div className="course-price">{course.price}</div>
-              <button className="learn-more-btn">Learn More</button>
+            <div key={course.id} className="nonit-course-card">
+              <div className="nonit-course-icon">{course.icon}</div>
+              <h3 className="nonit-course-title">{course.title}</h3>
+              <p className="nonit-course-description">{course.description}</p>
+              <div className="nonit-course-price">{course.price}</div>
+              <button className="nonit-learn-more-btn">Learn More</button>
             </div>
           ))}
         </div>

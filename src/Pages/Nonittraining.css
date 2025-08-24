@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 /* Base Styles */
-.digital-courses-container {
+.nonittraining-container {
   max-width: 1200px;
   margin: -40px auto 0 auto;
   padding: 0 1rem 2rem 1rem;
@@ -11,17 +11,17 @@
 }
 
 /* Typography */
-.page-header {
+.nonit-page-header {
   text-align: center;
   padding: 2rem 1rem;
-  margin-top: 20px;
+  margin-bottom: 40px;   /* same as IT page so cards move up */
 }
 
-.page-header h1 {
+.nonit-page-header h1 {
   font-size: 3rem;
   font-weight: 800;
   line-height: 1.2;
-  background: linear-gradient(90deg, #87a0fc, #7da0d6);
+  background: linear-gradient(90deg, #87a0fc, #7da0d6); /* match IT style */
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -29,7 +29,7 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.page-header p {
+.nonit-page-header p {
   font-size: 1.25rem;
   color: #4a5568;
   max-width: 600px;
@@ -39,7 +39,7 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.programs-section h2 {
+.nonit-programs-section h2 {
   font-size: 1.8rem;
   color: #2d3748;
   margin: 2.5rem 0 1.5rem;
@@ -48,26 +48,26 @@
   position: relative;
 }
 
-.programs-section h2::after {
+.nonit-programs-section h2::after {
   content: '';
   position: absolute;
   bottom: -2px;
   left: 0;
   width: 100px;
   height: 2px;
-  background: #38a169; /* Green for Non-IT */
+  background: #3182ce; /* Blue for Non-IT */
 }
 
-/* Course Grid Layout */
-.courses-grid {
+/* Course Grid */
+.nonit-courses-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 1.8rem;
   margin-top: 1.5rem;
 }
 
-/* Course Card Styling */
-.course-card {
+/* Course Card */
+.nonit-course-card {
   background: white;
   border-radius: 12px;
   padding: 2rem 1.5rem;
@@ -83,25 +83,23 @@
   overflow: hidden;
 }
 
-.course-card:hover {
+.nonit-course-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 
               0 4px 6px -2px rgba(0, 0, 0, 0.05);
   border-color: #c6f6d5;
 }
 
-.course-card::before {
+.nonit-course-card::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background: linear-gradient(90deg, #38a169, #48bb78);
+  top: 0; left: 0;
+  width: 100%; height: 4px;
+  background: linear-gradient(90deg, #3182ce, #00b5d8);
 }
 
 /* Course Card Elements */
-.course-icon {
+.nonit-course-icon {
   font-size: 2.8rem;
   margin-bottom: 1.2rem;
   width: 80px;
@@ -109,19 +107,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #f0fff4;
+  background: #ebf8ff;
   border-radius: 50%;
-  color: #38a169;
+  color: #3182ce;
 }
 
-.course-title {
+.nonit-course-title {
   font-size: 1.3rem;
   font-weight: 600;
   color: #2d3748;
   margin-bottom: 0.8rem;
 }
 
-.course-description {
+.nonit-course-description {
   font-size: 0.95rem;
   color: #718096;
   margin-bottom: 1.5rem;
@@ -129,9 +127,9 @@
   flex-grow: 1;
 }
 
-.course-price {
-  background: #d9dde0;
-  color: rgb(244, 233, 233);
+.nonit-course-price {
+  background: #3182ce;   /* same blue pill as IT */
+  color: #fff;
   padding: 0.5rem 1.2rem;
   border-radius: 20px;
   font-weight: 600;
@@ -140,10 +138,10 @@
   display: inline-block;
 }
 
-.learn-more-btn {
+.nonit-learn-more-btn {
   background: white;
-  border: 2px solid #38a169;
-  color: #38a169;
+  border: 2px solid #3182ce;
+  color: #3182ce;
   padding: 0.6rem 1.8rem;
   border-radius: 30px;
   font-weight: 600;
@@ -154,60 +152,8 @@
   max-width: 200px;
 }
 
-.learn-more-btn:hover {
-  background: #38a169;
+.nonit-learn-more-btn:hover {
+  background: #3182ce;
   color: white;
   transform: translateY(-2px);
-}
-
-/* Responsive Design */
-@media (max-width: 1024px) {
-  .courses-grid {
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 1.5rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .page-header h1 {
-    font-size: 2.2rem;
-  }
-  
-  .programs-section h2 {
-    font-size: 1.6rem;
-    margin: 2rem 0 1.2rem;
-  }
-  
-  .courses-grid {
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 1.2rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .digital-courses-container {
-    padding: 1.5rem 1rem;
-  }
-  
-  .page-header h1 {
-    font-size: 1.8rem;
-  }
-  
-  .page-header p {
-    font-size: 1rem;
-  }
-  
-  .courses-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .course-card {
-    padding: 1.5rem 1rem;
-  }
-  
-  .course-icon {
-    font-size: 2.2rem;
-    width: 70px;
-    height: 70px;
-  }
 }
